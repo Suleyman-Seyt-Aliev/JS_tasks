@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Не первая программа</title>
+	</head>
+	<body>
+        <h2>383#1</h2>
+        <ul id="elem1">
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        <h2>383#2</h2>
+        <ul id="elem2">
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        <h2>383#3</h2>
+        <ul id="elem3">
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        <h2>384#1</h2>
+        <div>
+            <ul>
+                <li>text</li>
+                <li>text</li>
+                <li id="elem4">text</li>
+                <li>text</li>
+                <li>text</li>
+            </ul>
+        </div>
+        <h2>385#1</h2>
+        <header id>
+            <div>
+                <p>
+                    <span id="elem5"></span>
+                </p>
+            </div>
+        </header>
+        <h2>385#2</h2>
+        <header>
+            <div class="www">
+                <p class="www">
+                    <span id="elem6"></span>
+                </p>
+            </div>
+        </header>
+        <h2>386#1</h2>
+        <ul>
+            <li>text</li>
+            <li>text</li>
+            <li id="elem7">text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        <h2>386#2</h2>
+        <ul>
+            <li>text</li>
+            <li>text</li>
+            <li id="elem8">text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        <h2>386#3</h2>
+        <ul>
+            <li>text</li>
+            <li>text</li>
+            <li id="elem9">text</li>
+            <li>text</li>
+            <li>text</li>
+        </ul>
+        <h2>386#4</h2>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li id="elem10">3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <h2>387#1</h2>
+        <div id="elem_1"></div>
+        <h2>388#1</h2>
+        <ol>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+            <li>text</li>
+        </ol>
+        <h2>389#1</h2>
+        <p class="uuu">elem 1</p>
+        <p class="uuu">elem 2</p>
+        <p class="uuu">elem 3</p>
+        <h2>390#1</h2>
+        <div id="parent1">
+            <p class="www">text</p>
+            <p class="www">text</p>
+            <p class="www">text</p>
+            <p class="ggg">text</p>
+            <p class="ggg">text</p>
+            <p class="ggg">text</p>
+        </div>
+      
+<script>
+//383
+let elem1 = document.querySelector('#elem1');
+let text1 = elem1.firstElementChild.style.color = 'red';
+let elem2 = document.querySelector('#elem2');
+let text2 = elem2.lastElementChild.style.color = 'red';
+let elem3 = document.querySelector('#elem3');
+let child3 = elem3.children;
+
+for(let child of child3){
+    child.textContent+='!';
+}
+
+//384
+let elem4 = document.querySelector('#elem4');
+let id = elem4.parentElement;
+id.style.border = '2px solid red';
+console.log(id);
+
+//385
+let elem5 = document.querySelector('#elem5');
+let closest_elem5_div = elem5.closest('div');
+console.log(closest_elem5_div);
+//2
+let elem6 = document.querySelector('#elem6');
+let closest_elem6_class = elem6.closest('.www');
+console.log(closest_elem6_class);
+
+//386
+//1
+let elem7 = document.querySelector('#elem7');
+let previous_elem7 = elem7.previousElementSibling;
+previous_elem7.textContent += '!';
+//2
+let elem8 = document.querySelector('#elem8');
+let next_elem8 = elem8.nextElementSibling;
+next_elem8.textContent += '!';
+//3
+let elem9 = document.querySelector('#elem9');
+let next_elem9 = elem9.nextElementSibling;
+next_elem9.nextElementSibling.textContent += '!';
+//4
+let elem10 = document.querySelector('#elem10');
+let previous_elem10 = elem10.previousElementSibling;
+let next_elem10 = elem10.nextElementSibling;
+let three = previous_elem10.textContent;
+let three1 = next_elem10.textContent;
+previous_elem10.textContent = three1;
+next_elem10.textContent = three;
+
+//387
+let getid_elem_1 = document.getElementById('elem_1');
+getid_elem_1.textContent = 'Текст установлен!!!';
+
+//388
+let get_tag_name = document.getElementsByTagName('ol');
+for (let i = 0; i < get_tag_name.length; i++) {
+    get_tag_name[i].style.color = 'red';
+}
+
+//389
+
+let get_classname = document.getElementsByClassName('uuu');
+for(let i = 0; i < get_classname.length; i++){
+    get_classname[i].style.color='blue';
+}
+
+
+//390
+
+let parent1 = document.querySelector('#parent1');
+let elems1 = parent1.querySelectorAll('.www');
+let elems2 = parent1.querySelectorAll('.ggg');
+console.log(elems1);
+console.log(elems2);
+for(let i = 0; i < elems1.length; i++){
+    elems1[i].textContent += ' [class www]';
+}
+for(let i = 0; i < elems2.length; i++){
+    elems2[i].textContent +=' [class ggg]';
+}
+
+
+	</script>
+
+
+	</body>
+</html> 
