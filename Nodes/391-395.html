@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Не первая программа</title>
+	</head>
+	<body>
+        <h2>391#1</h2>
+     
+        <div id="elem1">Первый элемент</div>
+        <div id="elem">Второй элемент</div>
+        <!-- комментарий -->
+        <div id="elem2">Третий элемент</div>
+        <h2>392#1</h2>
+        <div id="elem3">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+        <h2>393#1</h2>
+        <div id="elem4">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+        <h2>394#1</h2>
+        <div id="elem5">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+        <h2>395#1</h2>
+        <p>Тип узла: 1 для элементов, 3 для текстовых узлов, 8 для комментариев.</p>
+        <div id="elem6">txt<b>tag</b><!--com-->txt<b>tag</b><!--com--></div>
+        
+<script>
+    //391
+    console.log(`
+391 Задание:
+    `);
+    let elem = document.querySelector('#elem');
+
+    console.log(elem.lastChild);        // последний узел (текст)
+    console.log(elem.lastElementChild); // последний элемент 
+
+    console.log(elem.nextSibling);        // следующий узел (комментарий)
+    console.log(elem.nextElementSibling); // следующий элемент (div)
+    
+    console.log(elem.previousSibling);        // предыдущий узел (текст) 
+    console.log(elem.previousElementSibling); // предыдущий элемент (div)
+    //392
+    console.log(`
+392 Задание:
+   `);
+    let elem3 = document.querySelector('#elem3');
+    for(let node of elem3.childNodes){
+        console.log(node);
+    }
+    console.log(`
+393 Задание:
+   `);
+   let elem4 = document.querySelector('#elem4');
+   for(let node of elem4.childNodes){
+        console.log(node.nodeName);
+    }
+    console.log(`
+394 Задание:
+   `);
+   let elem5 = document.querySelector('#elem5');
+   for(let node of elem5.childNodes){
+    if(node.nodeType<8){ console.log(node.nodeType); }    
+    }
+    console.log(`
+395.1 Задание:
+   `);
+   let elem6 = document.querySelector('#elem6');
+   for(let node of elem6.childNodes){
+    console.log(node.textContent)    
+    }
+    console.log(`
+395.2 Задание:
+   `);
+   for(let node of elem6.childNodes){
+    if(node.nodeType>1){
+    console.log(node.textContent)}    
+    }
+    console.log(`
+395.3 Задание:
+   `);
+   for(let node of elem6.childNodes){
+    if(node.nodeType<8){
+    console.log(node.textContent)}    
+    }
+    console.log(`
+395.4 Задание:
+   `);
+   for(let node of elem6.childNodes){
+    node.textContent += ' '+ node.nodeType + ' '
+    console.log(node.textContent)  
+    }
+</script>
+
+
+
+	</body>
+</html> 
