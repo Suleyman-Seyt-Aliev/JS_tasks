@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Не первая программа</title>
+	</head>
+	<body>
+        <h2>365#1</h2>
+        <input id="elem1" value="text">
+        <h2>365#2</h2>
+        <input id="elem2" class="www zzz">
+        <h2>366#1</h2>
+        <input id="elem3">
+        <h2>366#2</h2>
+        <input id="elem4">
+        <h2>367#1</h2>
+        <input id="elem5" value="text">
+        <h2>368#1</h2>
+        <input id="elem6" value="text">
+        <h2>369#1</h2>
+        <div id="elem7" data-text="str">text</div>
+        <h2>369#2</h2>
+        <div data-num="1" id="elem8">text</div>
+        <div data-num="2" id="elem8">text</div>
+        <div data-num="3" id="elem8">text</div>
+        <div data-num="4" id="elem8">text</div>
+        <div data-num="5" id="elem8">text</div>
+        <h2>369#3</h2>
+        <button id="Button1">Кликни меня!</button>
+        <p><button id="Button2">Показать количество кликов</button></p>
+        <h2>369#4</h2>
+        <input id="elem" data-n="5">
+        <h2>369#5</h2>
+        <input id="elem" data-min="5" data-max="10">
+        <h2>370#1</h2>
+        <div id="elem_1" data-product-price="1000" data-product-amount="5">
+            товар яблоки
+        </div>
+        <h2>371#1</h2>
+        <p id="elem_2" data-num="">смотри код элемента</p>
+        <p id="elem_2" data-num="">смотри код элемента</p>
+        <p id="elem_2" data-num="">смотри код элемента</p>
+        <h2>372#1</h2>
+        <p id="elem_3" class="www ggg zzz">смотри код элемента</p>
+        <h2>372#2</h2>
+        <p id="elem_4" class="www ggg zzz">смотри код элемента</p>
+        <h2>373#1</h2>
+        <p id="elem_5" class="www ggg zzz">смотри код элемента</p>
+        <h2>374#1</h2>
+        <p id="elem_6" class="aaa ccc zzz">смотри код элемента</p>
+        <h2>375#1</h2>
+        <p id="elem_7" class="aaa ccc xxx">смотри код элемента</p>
+        <h2>376#1</h2>
+        <p id="elem_8" class="aaa ccc xxx">смотри код элемента</p>
+<script>
+    //365
+let elem1 = document.querySelector('#elem1');
+let value = elem1.getAttribute('value');
+
+console.log(value);
+
+let elem2 = document.querySelector('#elem2');
+
+console.log(elem2.getAttribute('class'));
+
+//366
+let elem3 = document.querySelector('#elem3');
+let value1 = elem3.setAttribute('value', 'text');
+console.log(elem3.getAttribute('value'));
+
+let elem4 = document.querySelector('#elem4');
+let class1 = elem4.setAttribute('class', 'valid');
+console.log(elem4.getAttribute('class'));
+
+//367
+let elem5 = document.querySelector('#elem5');
+let remove_elem5 = elem5.removeAttribute('value');
+
+//368
+let elem6 = document.querySelector('#elem6');
+let has_elem6 = elem6.hasAttribute('value');
+console.log(has_elem6);
+
+//369
+let elem7 = document.querySelector('#elem7');
+elem7.addEventListener('click', function(){
+    elem7.textContent += elem7.dataset.text;
+}
+)
+//2
+let elem8 = document.querySelectorAll('div[data-num]');
+elem8.forEach(elem8 => {
+    elem8.addEventListener('click', function(){
+        elem8.textContent += elem8.dataset.num;}
+)})
+  
+
+
+//370
+let click = document.querySelector('#elem_1');
+let sum = click.addEventListener('click', ()=>{
+    let price = Number(click.dataset.productPrice);
+    let amount = Number(click.dataset.productAmount);
+    let sum = price * amount;
+
+    click.textContent += '(Стоимость: '+ sum + ')';
+})
+
+//371
+let abzacs = document.querySelectorAll('#elem_2');
+for (let i = 0; i < abzacs.length; i++) {
+    abzacs[i].setAttribute('data-num', i + 1);
+    console.log(abzacs[i].getAttribute('data-num'));
+}
+
+//372
+let elem_3 = document.querySelector('#elem_3');
+let length = elem_3.classList.length;
+console.log(length)
+//2
+let elem_4 = document.querySelector('#elem_4');
+let classNames = elem_4.classList;
+
+for(let name of classNames){
+    console.log(name);
+}
+
+//373
+let elem_5 = document.querySelector('#elem_5')
+let plus_class = elem_5.classList.add('bbb');
+console.log(elem_5.getAttribute('class'));
+
+//374
+let elem_6 = document.querySelector('#elem_6')
+let minus_class = elem_6.classList.remove('aaa', 'ccc');
+console.log(elem_6.getAttribute('class'));
+
+//375
+let elem_7 = document.querySelector('#elem_7')
+let proverka_class = elem_7.classList.contains('xxx');
+console.log(elem_7.getAttribute('class'));
+console.log(proverka_class);
+
+//376
+let elem_8 = document.querySelector('#elem_8');
+elem_8.classList.toggle('www');
+console.log(elem_8.getAttribute('class'))
+	</script>
+
+
+	</body>
+</html> 
