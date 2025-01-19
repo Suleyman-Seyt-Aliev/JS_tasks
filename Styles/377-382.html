@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    
+		<title>Не первая программа</title>
+	</head>
+	<body>
+<h2>377#1</h2>
+        <div id="elem">
+            <h3>В условиях динамично развивающегося рынка общественного питания, управление кафе-баром становится все более сложной задачей. С ростом конкуренции и изменением потребительских предпочтений, заведения должны адаптироваться, предлагая не только качественные продукты и услуги, но и эффективное управление внутренними процессами. В этом контексте использование информационных систем, таких как «1С: Предприятие», приобретает особую значимость.</h3>
+        </div>
+        <input id="button" type="submit">
+<h2>378#1</h2>
+        <div id="elem1">
+            <h3>В условиях динамично развивающегося рынка общественного питания, управление кафе-баром становится все более сложной задачей. С ростом конкуренции и изменением потребительских предпочтений, заведения должны адаптироваться, предлагая не только качественные продукты и услуги, но и эффективное управление внутренними процессами. В этом контексте использование информационных систем, таких как «1С: Предприятие», приобретает особую значимость.</h3>
+        </div>
+<input id="button1" type="submit">
+   
+<h2>379#1</h2>
+<ul id="elem2">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<input id="button2" type="submit">
+
+<h2>380-381#1</h2>
+<p id="text">В условиях динамично развивающегося рынка</p>
+<input id="line" type="submit" value ="Сделать перечёркнутым">
+<input id="bold" type="submit" value ="Сделать жирным">
+<input id="red" type="submit" value ="Сделать красным">
+
+<h2>382#1</h2>
+<button id="button6">click me</button>
+<div id="elem6"></div>
+
+<script>
+//377
+let button = document.querySelector('#button');
+button.addEventListener('click',func)
+function func(){
+    elem.style.width = '500px';
+    elem.style.height = '250px';
+    elem.style.border = '2px solid black';
+}
+
+//378
+let button1 = document.querySelector('#button1');
+button1.addEventListener('click',function(){
+    elem1.style.width = '500px';
+    elem1.style.fontSize = '20px';
+    elem1.style.borderTop = '20px';
+    elem1.style.backgroundColor = 'yellow';
+})
+
+//379 
+let button2 = document.querySelector('#button2');
+button2.addEventListener('click',function(){
+    elem2.style.cssFloat = 'left';
+})
+
+
+
+
+
+	</script>
+<style>
+    /* 380-381 */
+    .red {
+        color: red;
+    }
+    .bold {
+        font-weight: bold;
+    }
+    .line {
+        text-decoration: line-through;
+    }
+    /* 382 */
+    #elem6 {
+        display: none;
+        width: 200px;
+	    height: 200px;
+	    border: 1px solid green;
+    }
+    #elem6.active {
+	display: block;
+    }
+    </style>
+    <script src="script.js"></script>
+	</body>
+</html> 
