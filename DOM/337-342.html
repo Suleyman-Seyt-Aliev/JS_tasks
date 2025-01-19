@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Не первая программа</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<h2>339#1</h2>
+        <p id="elem1">1</p>
+        <p id="elem2">2</p>
+        <p id="elem3">3</p>
+<h2>340#1</h2>
+        <div id="block">
+	<p>Идеальная</p>
+	<p>Причёска</p>
+       </div> 
+
+	   <h2>340#2</h2>
+
+	<div class="block">
+	<p>У</p>
+	<p>Тебя</p>
+     </div>
+   <h2>340#3</h2>
+     <p class="www">text</p>
+     <p class="www">text</p>
+ 
+	 <h2>341#1</h2>
+<input id="button1" type="submit">
+<input id="button2" type="submit">
+<input id="button3" type="submit">
+ 
+<h2>342#1</h2>
+<input id="button11" type="submit" value="button1">
+<input id="button22" type="submit" value="button2">
+
+
+
+
+
+
+<script>
+//339
+let elem1 = document.querySelector('#elem1');
+console.log(elem1);
+
+let elem2 = document.querySelector('#elem2');
+console.log(elem2);
+
+let elem3 = document.querySelector('#elem3');
+console.log(elem3);
+
+//340 
+
+let elem4 = document.querySelector('#block p');
+console.log(elem4);
+
+//2
+
+let elem5 = document.querySelector('.block p');
+console.log(elem5);
+
+//3
+let elem6 = document.querySelector('.www');
+console.log(elem6); 
+
+
+//341
+    let button1 = document.querySelector('#button1');
+	let button2 = document.querySelector('#button2');
+	let button3 = document.querySelector('#button3');
+	button1.addEventListener('click', function() {
+		alert('1');
+	});
+	button2.addEventListener('click', function() {
+		alert('2');
+	});
+	button3.addEventListener('click', function() {
+		alert('3');
+	});
+
+	//342
+let button11 = document.querySelector('#button11');
+button11.addEventListener('click', func1);
+let button22 = document.querySelector('#button22');
+button22.addEventListener('click', func2);
+function func1() {
+	console.log(1);
+}
+
+function func2() {
+	console.log(2);
+}
+	</script>
+
+
+	</body>
+</html> 
